@@ -1,23 +1,19 @@
 # vue-typescript-starter
 
-This template should help get you started developing with Vue 3 in Vite.
+This project is a custom Vue 3 template with TypeScript set up. 
 
-## Type Support for `.vue` Imports in TS
+It bears recommendations from the official docs at [vuejs.org](https://vuejs.org/guide/introduction.html), but also my personal preferences as someone coming from Angular.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+---
+### Important
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+resolver aliases
+: ```Note that resolver aliases are not set in the tsconfig compilerOptions. 
+This causes imports using '@/* to not work'. You instead must set up your imports via path-reference.```
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+---
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+### Project Setup
 
 ```sh
 npm install
